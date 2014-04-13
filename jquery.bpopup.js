@@ -54,6 +54,12 @@
 			id = prefix +$w.data('bPopup') + '__';
             close();
         };
+        
+        $popup.recenter = function() {
+            o = this.data('bPopup');
+			id = prefix +$w.data('bPopup') + '__';
+            recenter($(this));
+        };
 
         return $popup.each(function() {
             if ($(this).data('bPopup')) return; //POPUP already exists?
